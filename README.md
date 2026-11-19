@@ -12,9 +12,12 @@ A TFT-style autobattler starring teckels (dachshunds) and their friends, built w
 | --- | --- |
 | `data/breeds.json` | The 35 breeds: groups, jobs, tier and base stats, from the balance sheet |
 | `scripts/battle/` | The battle rules as pure logic: board, targeting, long teckels, synergies |
-| `scripts/main.gd` | The battle viewer that plays a demo fight |
-| `tests/test_battle.gd` | Headless tests for the battle rules |
-| `tools/sample_fight.gd` | Prints the demo fight's result, for quick balance checks |
+| `scripts/game/` | The season: economy, shared kennel, shop, packs, merging, AI rivals |
+| `scripts/ui/` | The game screen (shop, board, bench, league) and the battle view |
+| `tests/` | Headless tests for the battle, the game rules and the screen |
+| `tools/sample_fight.gd` | Prints a demo fight's result, for quick balance checks |
+| `tools/sample_season.gd` | Plays a whole season with bots and prints the standings |
+| `tools/ui_snapshots.gd` | Saves screenshots of the shop and a battle |
 
 ## Running locally
 
@@ -22,8 +25,9 @@ With Godot 4.3:
 
 ```sh
 godot --headless --import
-godot --headless -s tests/test_battle.gd   # run the tests
+godot --headless -s tests/test_battle.gd   # run the tests (also test_game.gd, test_ui.gd)
 godot --headless -s tools/sample_fight.gd  # print a sample fight
+SEED=3 godot --headless -s tools/sample_season.gd  # play a bot season
 godot                                      # open the editor
 ```
 

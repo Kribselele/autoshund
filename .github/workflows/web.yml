@@ -34,8 +34,11 @@ jobs:
       - name: Import project
         run: godot --headless --import || true
 
-      - name: Run battle tests
-        run: godot --headless -s tests/test_battle.gd
+      - name: Run tests
+        run: |
+          godot --headless -s tests/test_battle.gd
+          godot --headless -s tests/test_game.gd
+          godot --headless -s tests/test_ui.gd
 
       - name: Export for the web
         run: |
