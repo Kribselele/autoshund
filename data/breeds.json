@@ -1,0 +1,566 @@
+[
+ {
+  "id": "teckel",
+  "name": "Teckel",
+  "groups": [
+   "Hounds"
+  ],
+  "jobs": [
+   "Saucisse"
+  ],
+  "tier": 1,
+  "bite": 36,
+  "fluff": 600,
+  "pace": 0.65,
+  "ability": "Grows 1 Length per level",
+  "long": true
+ },
+ {
+  "id": "beagle",
+  "name": "Beagle",
+  "groups": [
+   "Hounds"
+  ],
+  "jobs": [
+   "Pisteur"
+  ],
+  "tier": 1,
+  "bite": 40,
+  "fluff": 420,
+  "pace": 0.8,
+  "ability": "Howls at the weakest enemy: it takes +25% damage",
+  "long": false
+ },
+ {
+  "id": "jack_russell",
+  "name": "Jack Russell",
+  "groups": [
+   "Terriers"
+  ],
+  "jobs": [
+   "Bagarreur"
+  ],
+  "tier": 1,
+  "bite": 48,
+  "fluff": 440,
+  "pace": 0.86,
+  "ability": "Very high Pace, low Fluff",
+  "long": false
+ },
+ {
+  "id": "welsh_corgi",
+  "name": "Welsh Corgi",
+  "groups": [
+   "Herders"
+  ],
+  "jobs": [
+   "Bagarreur"
+  ],
+  "tier": 1,
+  "bite": 48,
+  "fluff": 550,
+  "pace": 0.75,
+  "ability": "+50% Bite against L and XL dogs",
+  "long": false
+ },
+ {
+  "id": "chihuahua",
+  "name": "Chihuahua",
+  "groups": [
+   "Toys"
+  ],
+  "jobs": [
+   "Aboyeur"
+  ],
+  "tier": 1,
+  "bite": 29,
+  "fluff": 380,
+  "pace": 0.73,
+  "ability": "Stuns its target 1 s every 5 s",
+  "long": false
+ },
+ {
+  "id": "cocker_anglais",
+  "name": "Cocker anglais",
+  "groups": [
+   "Sporting"
+  ],
+  "jobs": [
+   "Pisteur"
+  ],
+  "tier": 1,
+  "bite": 40,
+  "fluff": 420,
+  "pace": 0.8,
+  "ability": "Floppy Ears: 20% chance to dodge a hit",
+  "long": false
+ },
+ {
+  "id": "teckel_a_poil_dur",
+  "name": "Teckel à poil dur",
+  "groups": [
+   "Hounds"
+  ],
+  "jobs": [
+   "Saucisse",
+   "Plongeur"
+  ],
+  "tier": 2,
+  "bite": 50,
+  "fluff": 780,
+  "pace": 0.65,
+  "ability": "Burrows at start, pops up in the enemy back row",
+  "long": true
+ },
+ {
+  "id": "basset_hound",
+  "name": "Basset Hound",
+  "groups": [
+   "Hounds"
+  ],
+  "jobs": [
+   "Gardien"
+  ],
+  "tier": 2,
+  "bite": 41,
+  "fluff": 910,
+  "pace": 0.6,
+  "ability": "Naps at half Fluff, healing 30%",
+  "long": false
+ },
+ {
+  "id": "scottish_terrier",
+  "name": "Scottish Terrier",
+  "groups": [
+   "Terriers"
+  ],
+  "jobs": [
+   "Gardien"
+  ],
+  "tier": 2,
+  "bite": 41,
+  "fluff": 910,
+  "pace": 0.6,
+  "ability": "Stubborn: immune to stuns",
+  "long": false
+ },
+ {
+  "id": "border_collie",
+  "name": "Border Collie",
+  "groups": [
+   "Herders"
+  ],
+  "jobs": [
+   "Aboyeur"
+  ],
+  "tier": 2,
+  "bite": 44,
+  "fluff": 580,
+  "pace": 0.7,
+  "ability": "Moves one enemy to the emptiest lane every 6 s",
+  "long": false
+ },
+ {
+  "id": "carlin",
+  "name": "Carlin",
+  "groups": [
+   "Toys"
+  ],
+  "jobs": [
+   "Soigneur"
+  ],
+  "tier": 2,
+  "bite": 33,
+  "fluff": 580,
+  "pace": 0.6,
+  "ability": "Snores: heals neighbours over time",
+  "long": false
+ },
+ {
+  "id": "spitz_nain",
+  "name": "Spitz nain",
+  "groups": [
+   "Toys"
+  ],
+  "jobs": [
+   "Gardien"
+  ],
+  "tier": 2,
+  "bite": 41,
+  "fluff": 910,
+  "pace": 0.6,
+  "ability": "Fluff Ball: starts with a big shield",
+  "long": false
+ },
+ {
+  "id": "bouledogue_francais",
+  "name": "Bouledogue français",
+  "groups": [
+   "Toys"
+  ],
+  "jobs": [
+   "Bagarreur"
+  ],
+  "tier": 2,
+  "bite": 66,
+  "fluff": 720,
+  "pace": 0.75,
+  "ability": "Stocky: cannot be pushed or moved",
+  "long": false
+ },
+ {
+  "id": "shih_tzu",
+  "name": "Shih Tzu",
+  "groups": [
+   "Toys"
+  ],
+  "jobs": [
+   "Gardien"
+  ],
+  "tier": 2,
+  "bite": 41,
+  "fluff": 910,
+  "pace": 0.6,
+  "ability": "Draws all enemy attacks for the first 3 s",
+  "long": false
+ },
+ {
+  "id": "dalmatien",
+  "name": "Dalmatien",
+  "groups": [
+   "Working"
+  ],
+  "jobs": [
+   "Plongeur"
+  ],
+  "tier": 2,
+  "bite": 61,
+  "fluff": 490,
+  "pace": 0.9,
+  "ability": "Fire-truck dash: its first hit stuns 1 s",
+  "long": false
+ },
+ {
+  "id": "teckel_a_poil_long",
+  "name": "Teckel à poil long",
+  "groups": [
+   "Hounds"
+  ],
+  "jobs": [
+   "Saucisse",
+   "Soigneur"
+  ],
+  "tier": 3,
+  "bite": 63,
+  "fluff": 960,
+  "pace": 0.65,
+  "ability": "Its long sweep also heals the allies beside it",
+  "long": true
+ },
+ {
+  "id": "chien_de_saint_hubert",
+  "name": "Chien de Saint-Hubert",
+  "groups": [
+   "Hounds"
+  ],
+  "jobs": [
+   "Pisteur"
+  ],
+  "tier": 3,
+  "bite": 70,
+  "fluff": 680,
+  "pace": 0.8,
+  "ability": "Finds burrowed dogs; ignores row rules",
+  "long": false
+ },
+ {
+  "id": "greyhound",
+  "name": "Greyhound",
+  "groups": [
+   "Hounds"
+  ],
+  "jobs": [
+   "Plongeur"
+  ],
+  "tier": 3,
+  "bite": 77,
+  "fluff": 600,
+  "pace": 0.99,
+  "ability": "Zoomies for the first 5 s",
+  "long": false
+ },
+ {
+  "id": "bull_terrier",
+  "name": "Bull Terrier",
+  "groups": [
+   "Terriers"
+  ],
+  "jobs": [
+   "Bagarreur"
+  ],
+  "tier": 3,
+  "bite": 84,
+  "fluff": 880,
+  "pace": 0.75,
+  "ability": "Lockjaw: holds a target; neither can act on others",
+  "long": false
+ },
+ {
+  "id": "staffordshire_bull_terrier",
+  "name": "Staffordshire Bull Terrier",
+  "groups": [
+   "Terriers"
+  ],
+  "jobs": [
+   "Gardien"
+  ],
+  "tier": 3,
+  "bite": 52,
+  "fluff": 1120,
+  "pace": 0.6,
+  "ability": "Gets tougher each time it is hit",
+  "long": false
+ },
+ {
+  "id": "berger_australien",
+  "name": "Berger australien",
+  "groups": [
+   "Herders"
+  ],
+  "jobs": [
+   "Pisteur"
+  ],
+  "tier": 3,
+  "bite": 70,
+  "fluff": 680,
+  "pace": 0.8,
+  "ability": "Herds marked enemies together so splash hits more of them",
+  "long": false
+ },
+ {
+  "id": "labrador_retriever",
+  "name": "Labrador retriever",
+  "groups": [
+   "Sporting"
+  ],
+  "jobs": [
+   "Soigneur"
+  ],
+  "tier": 3,
+  "bite": 42,
+  "fluff": 720,
+  "pace": 0.6,
+  "ability": "Fetch: brings back the first napping ally at 30% Fluff",
+  "long": false
+ },
+ {
+  "id": "dobermann",
+  "name": "Dobermann",
+  "groups": [
+   "Working"
+  ],
+  "jobs": [
+   "Gardien"
+  ],
+  "tier": 3,
+  "bite": 52,
+  "fluff": 1120,
+  "pace": 0.6,
+  "ability": "On Duty: strikes back at anyone who hits a neighbouring ally",
+  "long": false
+ },
+ {
+  "id": "husky_de_siberie",
+  "name": "Husky de Sibérie",
+  "groups": [
+   "Working"
+  ],
+  "jobs": [
+   "Aboyeur"
+  ],
+  "tier": 3,
+  "bite": 56,
+  "fluff": 720,
+  "pace": 0.7,
+  "ability": "Howl: allies gain Pace for 4 s",
+  "long": false
+ },
+ {
+  "id": "levrier_afghan",
+  "name": "Lévrier afghan",
+  "groups": [
+   "Hounds"
+  ],
+  "jobs": [
+   "Plongeur"
+  ],
+  "tier": 4,
+  "bite": 94,
+  "fluff": 710,
+  "pace": 0.9,
+  "ability": "Silky coat: dodges the first 3 hits",
+  "long": false
+ },
+ {
+  "id": "berger_allemand",
+  "name": "Berger allemand",
+  "groups": [
+   "Herders",
+   "Working"
+  ],
+  "jobs": [
+   "Gardien"
+  ],
+  "tier": 4,
+  "bite": 64,
+  "fluff": 1330,
+  "pace": 0.6,
+  "ability": "Takes hits meant for the dog behind it",
+  "long": false
+ },
+ {
+  "id": "berger_belge_malinois",
+  "name": "Berger belge malinois",
+  "groups": [
+   "Herders",
+   "Working"
+  ],
+  "jobs": [
+   "Bagarreur"
+  ],
+  "tier": 4,
+  "bite": 102,
+  "fluff": 1040,
+  "pace": 0.75,
+  "ability": "Never Lets Go: each hit on the same target deals +15% more, stacking",
+  "long": false
+ },
+ {
+  "id": "golden_retriever",
+  "name": "Golden retriever",
+  "groups": [
+   "Sporting"
+  ],
+  "jobs": [
+   "Soigneur"
+  ],
+  "tier": 4,
+  "bite": 51,
+  "fluff": 860,
+  "pace": 0.6,
+  "ability": "+1 kibble per round; allies +10% Bite",
+  "long": false
+ },
+ {
+  "id": "rottweiler",
+  "name": "Rottweiler",
+  "groups": [
+   "Working"
+  ],
+  "jobs": [
+   "Bagarreur"
+  ],
+  "tier": 4,
+  "bite": 102,
+  "fluff": 1040,
+  "pace": 0.75,
+  "ability": "Bites harder as its target loses Fluff",
+  "long": false
+ },
+ {
+  "id": "saint_bernard",
+  "name": "Saint-Bernard",
+  "groups": [
+   "Working"
+  ],
+  "jobs": [
+   "Soigneur"
+  ],
+  "tier": 4,
+  "bite": 51,
+  "fluff": 860,
+  "pace": 0.6,
+  "ability": "Heals the lowest-Fluff ally every 4 s",
+  "long": false
+ },
+ {
+  "id": "montagne_des_pyrenees",
+  "name": "Montagne des Pyrénées",
+  "groups": [
+   "Working"
+  ],
+  "jobs": [
+   "Gardien"
+  ],
+  "tier": 4,
+  "bite": 64,
+  "fluff": 1330,
+  "pace": 0.6,
+  "ability": "Patou: the dog behind it cannot be hit while it stands",
+  "long": false
+ },
+ {
+  "id": "terre_neuve",
+  "name": "Terre-neuve",
+  "groups": [
+   "Working"
+  ],
+  "jobs": [
+   "Soigneur"
+  ],
+  "tier": 4,
+  "bite": 51,
+  "fluff": 860,
+  "pace": 0.6,
+  "ability": "Lifeguard: shields any ally that drops below 25% Fluff",
+  "long": false
+ },
+ {
+  "id": "levrier_irlandais",
+  "name": "Lévrier irlandais",
+  "groups": [
+   "Hounds"
+  ],
+  "jobs": [
+   "Bagarreur"
+  ],
+  "tier": 5,
+  "bite": 126,
+  "fluff": 1210,
+  "pace": 0.75,
+  "ability": "Each hit also strikes the next dog in the lane",
+  "long": false
+ },
+ {
+  "id": "dogue_allemand",
+  "name": "Dogue allemand",
+  "groups": [
+   "Working"
+  ],
+  "jobs": [
+   "Gardien"
+  ],
+  "tier": 5,
+  "bite": 75,
+  "fluff": 1770,
+  "pace": 0.54,
+  "ability": "Gentle Giant: fills both rows of one lane",
+  "long": false
+ },
+ {
+  "id": "dogue_de_bordeaux",
+  "name": "Dogue de Bordeaux",
+  "groups": [
+   "Working"
+  ],
+  "jobs": [
+   "Bagarreur"
+  ],
+  "tier": 5,
+  "bite": 120,
+  "fluff": 1210,
+  "pace": 0.75,
+  "ability": "Heavy jowls: its first hit stuns the whole lane",
+  "long": false
+ }
+]
