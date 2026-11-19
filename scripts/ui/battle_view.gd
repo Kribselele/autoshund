@@ -1,6 +1,9 @@
+class_name BattleView
 extends Node2D
-## Battle viewer: plays the demo fight live so the rules can be watched.
+## Plays a fight live so the rules can be watched, then offers Continue.
 ## Placeholder shapes stand in for pixel-art sprites until the art pass.
+
+signal continue_pressed
 
 const CELL := Vector2(150, 64)
 const GAP := 8.0
@@ -22,22 +25,40 @@ const COLORS := {
 }
 
 var sim: BattleSim
+var rival_name := "Rival kennel"
+## Treat Bowl points the loser loses, as the season counts them.
+var loss_damage := 0
 var speed := 1.0
 var _accumulator := 0.0
 var _event_index := 0
 var _flash := {}
 var _font: Font
 var _speed_button: Button
+var _continue_button: Button
 
 
 func _ready() -> void:
 	_font = ThemeDB.fallback_font
-	_add_button("Restart", Vector2(BOARD_X, 470), _restart)
-	_speed_button = _add_button("Speed x1", Vector2(BOARD_X + 130, 470), _toggle_speed)
-	_restart()
+	_speed_button = _add_button("Speed x1", Vector2(BOARD_X, 470), _toggle_speed)
+	_add_button("Skip", Vector2(BOARD_X + 130, 470), _skip)
+	_continue_button = _add_button("Continue", Vector2(BOARD_X + 260, 470), func(): continue_pressed.emit())
+
+
+## Starts showing a fresh, not yet started battle.
+func play(p_sim: BattleSim, p_rival_name: String, p_loss_damage: int) -> void:
+	sim = p_sim
+	rival_name = p_rival_name
+	loss_damage = p_loss_damage
+	sim.start()
+	_accumulator = 0.0
+	_event_index = 0
+	_flash.clear()
 
 
 func _process(delta: float) -> void:
+	if sim == null:
+		return
+	_continue_button.visible = sim.finished
 	for unit in _flash.keys():
 		_flash[unit] -= delta
 		if _flash[unit] <= 0.0:
@@ -54,6 +75,8 @@ func _process(delta: float) -> void:
 
 
 func _draw() -> void:
+	if sim == null:
+		return
 	draw_rect(Rect2(Vector2.ZERO, get_viewport_rect().size), COLORS["bg"])
 	for i in ROW_Y.size():
 		for lane in BattleSim.LANES:
@@ -61,7 +84,7 @@ func _draw() -> void:
 	for unit in sim.units:
 		if unit.is_alive():
 			_draw_unit(unit)
-	_draw_side_panel(1, "Rival kennel", 16.0, 40.0)
+	_draw_side_panel(1, rival_name, 16.0, 40.0)
 	_draw_side_panel(0, "Your pack", 16.0, 218.0)
 	_draw_status()
 
@@ -107,11 +130,11 @@ func _draw_status() -> void:
 		var result := sim.result()
 		match result["winner"]:
 			0:
-				text = "Your pack wins! The rival loses %d Treat Bowl points." % result["loser_damage"]
+				text = "Your pack wins! %s loses %d Treat Bowl points." % [rival_name, loss_damage]
 			1:
-				text = "The rival wins. You lose %d Treat Bowl points." % result["loser_damage"]
+				text = "%s wins. You lose %d Treat Bowl points." % [rival_name, loss_damage]
 			_:
-				text = "Draw. Nobody loses points."
+				text = "Draw. Both packs lose 1 Treat Bowl point."
 	draw_string(_font, Vector2(BOARD_X, 400), text, HORIZONTAL_ALIGNMENT_LEFT, -1, 16, COLORS["text"])
 
 
@@ -135,12 +158,9 @@ func _add_button(text: String, pos: Vector2, callback: Callable) -> Button:
 	return button
 
 
-func _restart() -> void:
-	sim = DemoPacks.build()
-	sim.start()
-	_accumulator = 0.0
-	_event_index = 0
-	_flash.clear()
+func _skip() -> void:
+	while not sim.finished:
+		sim.step()
 
 
 func _toggle_speed() -> void:
